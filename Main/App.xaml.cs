@@ -43,8 +43,17 @@ namespace Main
             new ConfigurationBuilder()
                 .AddJsonFile("appsettings.json")
                 .Build());
-
             containerRegistry.Register<ITableHandler<Promotion>, PromotionHandler>();
+            containerRegistry.Register<ITableHandler<Position>, PositionHandler>();
+            containerRegistry.Register<ITableHandler<Venue>, VenueHandler>();
+            containerRegistry.Register<ITableHandler<Supplier>, SupplierHandler>();
+            containerRegistry.Register<ITableHandler<PaymentType>, PaymentTypeHandler>();
+            containerRegistry.Register<ITableHandler<ProductType>, ProductTypeHandler>();
+            containerRegistry.Register<ITableHandler<Product>, ProductHandler>();
+            containerRegistry.Register<ITableHandler<Warehouse>, WarehouseHandler>();
+            containerRegistry.Register<ITableHandler<Employee>, EmployeeHandler>();
+            containerRegistry.Register<ITableHandler<Shift>, ShiftHandler>();
+            containerRegistry.Register<ITableHandler<Sale>, SaleHandler>();
         }
     }
 }

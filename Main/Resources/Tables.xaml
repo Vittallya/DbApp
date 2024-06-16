@@ -1,7 +1,7 @@
 ﻿<ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
                     xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
     <ListView         
-        x:Key="promotionsTable">
+        x:Key="promotionTableView">
         <ListView.View>
             <GridView>
                 <GridView.Columns>
@@ -11,6 +11,149 @@
                     <GridViewColumn DisplayMemberBinding="{Binding DateBegin, StringFormat='dd.MM.yy'}" Header="Дата начала"/>
                     <GridViewColumn DisplayMemberBinding="{Binding DateEnd, StringFormat='dd.MM.yy'}" Header="Дата окончания"/>
                     <GridViewColumn DisplayMemberBinding="{Binding Value}" Header="Скидка"/>
+                </GridView.Columns>
+            </GridView>
+        </ListView.View>
+    </ListView>
+    
+    <ListView         
+        x:Key="positionTableView">
+        <ListView.View>
+            <GridView>
+                <GridView.Columns>
+                    <GridViewColumn DisplayMemberBinding="{Binding Id}" Header="Ид"/>
+                    <GridViewColumn DisplayMemberBinding="{Binding Name}" Header="Название должности"/>
+                    <GridViewColumn DisplayMemberBinding="{Binding Salary}" Header="Ставка"/>
+                </GridView.Columns>
+            </GridView>
+        </ListView.View>
+    </ListView>
+
+    <ListView         
+        x:Key="venueTableView">
+        <ListView.View>
+            <GridView>
+                <GridView.Columns>
+                    <GridViewColumn DisplayMemberBinding="{Binding Id}" Header="Ид"/>
+                    <GridViewColumn DisplayMemberBinding="{Binding Address}" Header="Адрес"/>
+                    <GridViewColumn DisplayMemberBinding="{Binding ContactInfo}" Header="Контактная информация"/>
+                </GridView.Columns>
+            </GridView>
+        </ListView.View>
+    </ListView>
+    
+    <ListView         
+        x:Key="supplierTableView">
+        <ListView.View>
+            <GridView>
+                <GridView.Columns>
+                    <GridViewColumn DisplayMemberBinding="{Binding Id}" Header="Ид"/>
+                    <GridViewColumn DisplayMemberBinding="{Binding Name}" Header="Название"/>
+                    <GridViewColumn DisplayMemberBinding="{Binding ContactPerson}" Header="Контактное лицо"/>
+                    <GridViewColumn DisplayMemberBinding="{Binding ContactData}" Header="Контактная информация"/>
+                    <GridViewColumn DisplayMemberBinding="{Binding Address}" Header="Адрес"/>
+                </GridView.Columns>
+            </GridView>
+        </ListView.View>
+    </ListView>
+    
+    <ListView         
+        x:Key="paymenttypeTableView">
+        <ListView.View>
+            <GridView>
+                <GridView.Columns>
+                    <GridViewColumn DisplayMemberBinding="{Binding Id}" Header="Ид"/>
+                    <GridViewColumn DisplayMemberBinding="{Binding Name}" Header="Способ оплаты"/>
+                </GridView.Columns>
+            </GridView>
+        </ListView.View>
+    </ListView>
+    
+    <ListView         
+        x:Key="producttypeTableView">
+        <ListView.View>
+            <GridView>
+                <GridView.Columns>
+                    <GridViewColumn DisplayMemberBinding="{Binding Id}" Header="Ид"/>
+                    <GridViewColumn DisplayMemberBinding="{Binding Name}" Header="Тип товара"/>
+                </GridView.Columns>
+            </GridView>
+        </ListView.View>
+    </ListView>
+    
+    <ListView         
+        x:Key="productTableView">
+        <ListView.View>
+            <GridView>
+                <GridView.Columns>
+                    <GridViewColumn DisplayMemberBinding="{Binding Id}" Header="Ид"/>
+                    <GridViewColumn DisplayMemberBinding="{Binding Name}" Header="Название продукции"/>
+                    <GridViewColumn DisplayMemberBinding="{Binding Cost}" Header="Цена"/>
+                    <GridViewColumn DisplayMemberBinding="{Binding ProductType.Name}" Header="Тип товара"/>
+                </GridView.Columns>
+            </GridView>
+        </ListView.View>
+    </ListView>
+    
+    <ListView         
+        x:Key="warehouseTableView">
+        <ListView.View>
+            <GridView>
+                <GridView.Columns>
+                    <GridViewColumn DisplayMemberBinding="{Binding Id}" Header="Ид"/>
+                    <GridViewColumn DisplayMemberBinding="{Binding Supplier.Name}" Header="Поставщик"/>
+                    <GridViewColumn DisplayMemberBinding="{Binding Venue.Address}" Header="Заведение"/>
+                    <GridViewColumn DisplayMemberBinding="{Binding Product.Name}" Header="Товар"/>
+                    <GridViewColumn DisplayMemberBinding="{Binding Count}" Header="Количество"/>
+                    <GridViewColumn DisplayMemberBinding="{Binding Date}" Header="Дата поставки"/>
+                </GridView.Columns>
+            </GridView>
+        </ListView.View>
+    </ListView>
+    
+    <ListView         
+        x:Key="employeeTableView">
+        <ListView.View>
+            <GridView>
+                <GridView.Columns>
+                    <GridViewColumn DisplayMemberBinding="{Binding Id}" Header="Ид"/>
+                    <GridViewColumn DisplayMemberBinding="{Binding FIO}" Header="ФИО"/>
+                    <GridViewColumn DisplayMemberBinding="{Binding Venue.Address}" Header="Заведение"/>
+                    <GridViewColumn DisplayMemberBinding="{Binding Position.Name}" Header="Должность"/>
+                    <GridViewColumn DisplayMemberBinding="{Binding ContactData}" Header="Контактные данные"/>
+                    <GridViewColumn DisplayMemberBinding="{Binding DateBirth}" Header="Дата рождения"/>
+                </GridView.Columns>
+            </GridView>
+        </ListView.View>
+    </ListView>
+    
+    <ListView         
+        x:Key="shiftTableView">
+        <ListView.View>
+            <GridView>
+                <GridView.Columns>
+                    <GridViewColumn DisplayMemberBinding="{Binding Id}" Header="Ид"/>
+                    <GridViewColumn DisplayMemberBinding="{Binding Employee.FIO}" Header="Сотрудник"/>
+                    <GridViewColumn DisplayMemberBinding="{Binding DateTimeBegin}" Header="Дата начала"/>
+                    <GridViewColumn DisplayMemberBinding="{Binding DateTimeEnd}" Header="Дата окончания"/>
+                </GridView.Columns>
+            </GridView>
+        </ListView.View>
+    </ListView>
+    
+    <ListView         
+        x:Key="saleTableView">
+        <ListView.View>
+            <GridView>
+                <GridView.Columns>
+                    <GridViewColumn DisplayMemberBinding="{Binding Id}" Header="Ид"/>
+                    <GridViewColumn DisplayMemberBinding="{Binding Employee.FIO}" Header="Сотрудник"/>
+                    <GridViewColumn DisplayMemberBinding="{Binding Venue.Address}" Header="Заведение"/>
+                    <GridViewColumn DisplayMemberBinding="{Binding PaymentType.Name}" Header="Способ оплаты"/>
+                    <GridViewColumn DisplayMemberBinding="{Binding Promotion.Name}" Header="Акция"/>
+                    <GridViewColumn DisplayMemberBinding="{Binding Product.Name}" Header="Продукция"/>
+                    <GridViewColumn DisplayMemberBinding="{Binding DateTime}" Header="Дата и время"/>
+                    <GridViewColumn DisplayMemberBinding="{Binding Cost}" Header="Сумма"/>
                 </GridView.Columns>
             </GridView>
         </ListView.View>

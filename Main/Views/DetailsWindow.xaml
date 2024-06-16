@@ -6,8 +6,7 @@
              xmlns:local="clr-namespace:Main.Views"
              xmlns:vms="clr-namespace:Main.ViewModels"
              d:DataContext="{d:DesignInstance Type=vms:DetailsViewModel}"
-             mc:Ignorable="d" 
-             Height="350" Width="600">
+             mc:Ignorable="d">
     
     <Grid>
         <Grid.ColumnDefinitions>
